@@ -1,4 +1,4 @@
-package com.damiantarquini.sgacs;
+package com.damiantarquini.sgacs.Ventas;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.damiantarquini.sgacs.R;
 
 public class DrawerVentas extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

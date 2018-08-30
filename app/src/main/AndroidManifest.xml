@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DrawerVentas"
+            android:name=".Ventas.DrawerVentas"
             android:label="@string/title_activity_drawer_ventas"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
