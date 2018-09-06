@@ -10,4 +10,6 @@
     <string name="nav_header_subtitle">CuilEmp</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="quit">Cerrar Sesión</string>
+    <string name="title_activity_menu_admin">MenuAdmin</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -15,9 +15,14 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Compras.MenuAdmin"
+            android:label="@string/title_activity_menu_admin"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
