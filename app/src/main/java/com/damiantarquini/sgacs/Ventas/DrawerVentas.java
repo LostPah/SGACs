@@ -1,5 +1,6 @@
 package com.damiantarquini.sgacs.Ventas;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.damiantarquini.sgacs.R;
 
@@ -19,17 +22,40 @@ public class DrawerVentas extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer_ventas);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_ventas);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        String nombreEmp = extras.getString("Nombre");
+        int CuilE = extras.getInt("CuilE");
+        int DNIE = extras.getInt("DNI");
+        String DireccionE = extras.getString("Direccion");
+        int Telefono = extras.getInt("Tel");
+        String MailE = extras.getString("Mail");
+
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_ventas);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_ventas);
+        //con esto generamos el usuario en el header del menu-------------------------------
+        View hView = navigationView.getHeaderView(0);
+        TextView TVnomb = (TextView) hView.findViewById(R.id.nombreempnav);
+        TextView TVdesc = (TextView) hView.findViewById(R.id.cuilempnav);
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+        if(b!=null){
+            String j =(String) b.get("Nombre");
+            TVnomb.setText(j);
+            String k =(String) b.get("CuilE");
+            TVdesc.setText(k);
+        }
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -69,12 +95,9 @@ public class DrawerVentas extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-        } else if (id == R.id.nav_gallery) {
-        } else if (id == R.id.nav_slideshow) {
-        } else if (id == R.id.nav_manage) {
-        } else if (id == R.id.nav_share) {
-        } else if (id == R.id.nav_send) {
+        if (id == R.id.nav_gestionc) {
+        } else if (id == R.id.nav_presupuesto) {
+        } else if (id == R.id.nav_ventas) {
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ventas.GestionClientes">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/window_background"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/md_keylines"
+            android:paddingRight="@dimen/md_keylines"
+            android:paddingTop="@dimen/md_keylines">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorPrimary"
+                android:text="Registrar nuevo Cliente"
+                android:textSize="@dimen/article_titles"
+                android:layout_marginBottom="@dimen/md_keylines" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registrar Cliente"
+                android:id="@+id/btnregicliente"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorPrimary"
+                android:text="Actualizar Información Cliente"
+                android:textSize="@dimen/article_titles"
+                android:layout_marginBottom="@dimen/md_keylines"
+                android:layout_marginTop="@dimen/md_keylines" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actualizar Información"
+                android:id="@+id/btnactucliente"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorPrimary"
+                android:text="Dar de baja Cliente"
+                android:textSize="@dimen/article_titles"
+                android:layout_marginBottom="@dimen/md_keylines"
+                android:layout_marginTop="@dimen/md_keylines" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dar baja Cliente"
+                android:id="@+id/btnbajacliente"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

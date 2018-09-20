@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ventas.Clientes.AltaCliente">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/window_background"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/md_keylines"
+            android:paddingRight="@dimen/md_keylines"
+            android:paddingTop="@dimen/md_keylines">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etnvuser_nombre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre y Apellido" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_dni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:paddingRight="40dp"
+                    android:paddingLeft="40dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etnvuser_dni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="DNI" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_alias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:layout_weight="0.3">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etnvuser_alias"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Alias" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    android:layout_weight="0.2">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/etnvuser_telefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nro. de Teléfono" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_domicilio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etnvuser_domicilio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Domicilio" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_reflug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etnvuser_reflug"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Referencia de Lugar" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agregar!"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/btnagregaruserconfir" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>
