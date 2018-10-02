@@ -8,13 +8,27 @@
     tools:context=".Ventas.DrawerVentas"
     tools:showIn="@layout/app_bar_drawer_ventas">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="100dp"/>
+
+        <TextView
+            android:id="@+id/textViewcalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/calendarView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:text="Fecha"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

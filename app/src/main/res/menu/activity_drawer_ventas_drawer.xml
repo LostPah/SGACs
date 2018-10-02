@@ -7,15 +7,15 @@
         <item
             android:id="@+id/nav_gestionc"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="Gestión de Clientes" />
         <item
             android:id="@+id/nav_presupuesto"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="Generar Presupuesto" />
         <item
             android:id="@+id/nav_ventas"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="Ventas" />
     </group>
 
 </menu>

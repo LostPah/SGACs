@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ventas.GestionVentas.MenuVentasPresup">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorPrimary"
+            android:text="Nueva Venta"
+            android:textSize="@dimen/article_titles"
+            android:layout_marginBottom="@dimen/md_keylines" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Venta"
+            android:id="@+id/btnmenuventas_nvaventa"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorPrimary"
+            android:text="Nueva venta a partir de Presupuesto"
+            android:textSize="@dimen/article_titles"
+            android:layout_marginBottom="@dimen/md_keylines"
+            android:layout_marginTop="@dimen/md_keylines" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Venta x Presup."
+            android:id="@+id/btnmenuventas_nvaventaxpresup"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

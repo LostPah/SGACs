@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.Button;
 
 import com.damiantarquini.sgacs.R;
+import com.damiantarquini.sgacs.Ventas.Clientes.ActualizarCliente;
 import com.damiantarquini.sgacs.Ventas.Clientes.AltaCliente;
+import com.damiantarquini.sgacs.Ventas.Clientes.BajaCliente;
 
 public class GestionClientes extends AppCompatActivity {
 
@@ -33,19 +35,21 @@ public class GestionClientes extends AppCompatActivity {
         btnactucliente.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(view.getContext(),nuevousuario.class);
+                Intent i = new Intent(view.getContext(),ActualizarCliente.class);
                 startActivity(i);
             }
         });
+
 
         btnbajacliente = (Button) findViewById(R.id.btnbajacliente);
         btnbajacliente.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(view.getContext(),nuevousuario.class);
+                Intent i = new Intent(view.getContext(),BajaCliente.class);
                 startActivity(i);
             }
         });
 
     }
+
 }

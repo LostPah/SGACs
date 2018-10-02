@@ -24,24 +24,22 @@ import org.json.JSONObject;
 
 public class Login_Activity extends AppCompatActivity {
 
-    private EditText etusuario;
+    private EditText etcuile;
     private EditText etpass;
     private Button btingresar;
-    private static String IP = "http://sistemadegestion.000webhostapp.com/SGACs/Login/Login_GETID.php?Id=";
+    private static String IP = "http://sistemadegestion.000webhostapp.com/SGACs/Login/Empleado_ObtenerdatosPorCuil.php?CuilE=";
     private RequestQueue mRequest;
     private VolleyRP volley;
-    private String USER = "";
+    private String NCUIL = "";
     private String PASSWORD = "";
     private TextView titulo;
-    private static final String STRING_PREFERENCES = "tarquini.damian.cjmservicios.Principal";
-    private static String PREFERENCE_ESTADO_BUTTON = "estado.button.sesion";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        etusuario = (EditText) findViewById(R.id.etusuario);
+        etcuile = (EditText) findViewById(R.id.etcuilE);
         etpass = (EditText) findViewById(R.id.etpass);
         btingresar = (Button) findViewById(R.id.btingresar);
 
@@ -51,15 +49,15 @@ public class Login_Activity extends AppCompatActivity {
         btingresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                verificarLogin(etusuario.getText().toString(),etpass.getText().toString());
+                verificarLogin(etcuile.getText().toString(),etpass.getText().toString());
             }
         });
     }
 
-    public void verificarLogin(String user, String pass){
-        USER = user;
+    public void verificarLogin(String cuile, String pass){
+        NCUIL = cuile;
         PASSWORD = pass;
-        solicitudJSON(IP+user);
+        solicitudJSON(IP+cuile);
     }
 
 
@@ -82,11 +80,11 @@ public class Login_Activity extends AppCompatActivity {
         //Controlar el JSON
         try {
             String estado = datos.getString("resultado");
-            if(estado.equals("CC")){
+            if(estado.equals("Correcto")){
                 JSONObject Jsondatos = new JSONObject(datos.getString("datos"));
-                String usuario = Jsondatos.getString("nombre");
+                String cuil = Jsondatos.getString("cuilE");
                 String contraseña = Jsondatos.getString("clave");
-                if (usuario.equals(USER) && contraseña.equals(PASSWORD)){
+                if (cuil.equals(NCUIL) && contraseña.equals(PASSWORD)){
                     Toast.makeText(this,"Usted se ha logeado correctamente",Toast.LENGTH_SHORT).show();
                     int cagetoriaemp = Jsondatos.getInt("esAdmin");
                     if (cagetoriaemp == 0) {
@@ -109,7 +107,7 @@ public class Login_Activity extends AppCompatActivity {
                     }
                 }
                 else{
-                    Toast.makeText(this,"La contraseña es incorrecta", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this,"Cuil o Clave Incorrecto.", Toast.LENGTH_SHORT).show();
                 }
             }
             else{

@@ -59,7 +59,8 @@
                         android:id="@+id/etnvuser_dni"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="DNI" />
+                        android:hint="DNI"
+                        android:inputType="number" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -96,7 +97,8 @@
                         android:id="@+id/etnvuser_telefono"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nro. de Teléfono" />
+                        android:hint="Nro. de Teléfono"
+                        android:inputType="number" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -140,6 +142,13 @@
                     android:text="Agregar!"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/btnagregaruserconfir" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkuserexistente"
+                    android:layout_below="@id/btnagregaruserconfir"
+                    android:text="Usuario existente?"/>
+
             </RelativeLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

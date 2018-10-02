@@ -34,11 +34,45 @@
         <activity
             android:name=".Compras.MenuAdmin"
             android:label="@string/title_activity_menu_admin"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Ventas.GestionClientes" />
-        <activity android:name=".Ventas.Clientes.AltaCliente" />
-        <activity android:name=".Ventas.Clientes.ActualizarCliente" />
-        <activity android:name=".Ventas.Clientes.BajaCliente"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ventas.GestionClientes">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ventas.Clientes.AltaCliente">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ventas.Clientes.ActualizarCliente">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ventas.Clientes.BajaCliente">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Ventas.Presupuestos.PresupuestoActivity" />
+        <activity android:name=".Ventas.GestionVentas.MenuVentasPresup" />
+        <activity android:name=".Ventas.GestionVentas.Ventaxpresup" />
+        <activity android:name=".Ventas.GestionVentas.Ventadirecta" />
     </application>
 
 </manifest>
